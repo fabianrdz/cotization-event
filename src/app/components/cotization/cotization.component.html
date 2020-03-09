@@ -1,0 +1,89 @@
+<section class="container">
+  <div class="row">
+  <h2 class="center-align">Calculate Your Party Budget</h2>
+    <article class="col s8 offset-s3">
+      <form method="POST" action="formulario-contacto.php">
+        <div class="input-field col s12">
+          <select>            
+            <option *ngFor="let list_event of list_event">{{list_event.name}}</option>
+          </select>
+          <label>KIND OF EVENT</label>
+        </div>
+        <div></div>
+        <div class="input-field">
+          <label for="nombre"></label>
+          <input type="text" name="nombre" disabled>
+        </div>
+
+        <div class="input-field">
+          <label for="date">Date (MM/DD/YYYY)</label>
+          <input type="text" name="date" >
+        </div>
+        
+        <div class="input-field">
+          <label for="numberpeople">Number of People</label>
+          <input type="number" name="numberpeople" >
+        </div>
+
+        <div class="input-field col s12">
+          <select>
+            <option *ngFor="let type_food of type_food">{{type_food.name}}</option>
+          </select>
+          <label>Type of food</label>
+        </div>
+
+        <div class="input-field col s12">
+          <select>
+              <option *ngFor="let leading_events of leading_events">{{leading_events.name}}</option>
+          </select>
+          <label>Leading Events</label>
+        </div>
+
+<label >Aditional Service</label>
+
+  <p>
+    <label>
+      <input type="checkbox" class="filled-in" checked="checked" />
+      <span>Cocktail bar</span>  
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" class="filled-in" />
+      <span>Photographer</span>  
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" class="filled-in" />
+      <span>Staff for the event</span>  
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" class="filled-in" />
+      <span>Music Program</span>  
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" class="filled-in" />
+      <span>Transport service</span>  
+    </label>
+  </p>
+    <p>
+      <label>
+        <input type="checkbox" class="filled-in" />
+        <span>Decor</span>  
+      </label>
+    </p>
+
+        <p class="center-align">
+          <button class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>enviar</button>
+        </p>
+
+      </form>
+
+    </article>
+  </div>
+</section>
